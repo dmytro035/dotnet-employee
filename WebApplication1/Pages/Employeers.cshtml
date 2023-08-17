@@ -1,0 +1,199 @@
+﻿@page
+@model WebApplication1.Pages.EmployeersModel
+@{
+}
+<h1>Employees List</h1>
+
+<!-- dashboard contents start -->
+<div class="container-fluid">
+    <div class="row mt-3">
+        <div class="col-lg-3 col-md-3">
+            <div class="list-group small">
+                <div class="list-group-item active">Employee Data</div>
+                <a href="#" class="list-group-item" data-toggle="modal" data-target="#add_employee">Add Employee</a>
+                <a href="/employeers" class="list-group-item">View All Employee</a>
+            </div>
+        </div>
+        <div class="col-lg-9 col-md-9">
+            <table class="table table-striped table-hover bg-light small">
+                <tr class="table-dark">
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email ID</th>
+                    <th>Details</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Heracles</td>
+                    <td>heracles2756@gmail.com</td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-block btn-info" data-toggle="modal"
+                           data-target="#employeeDetails">Details</a>
+                    </td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-block btn-warning" data-toggle="modal"
+                           data-target="#employeeEditDetails">Edit</a>
+                    </td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-block btn-danger"
+                           onclick="confirm('Are you sure you want to delete \'Heracles\'?')">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Heracles</td>
+                    <td>heracles2756@gmail.com</td>
+                    <td><a href="#" class="btn btn-sm btn-block btn-info">Details</a></td>
+                    <td><a href="#" class="btn btn-sm btn-block btn-warning">Edit</a></td>
+                    <td><a href="#" class="btn btn-sm btn-block btn-danger">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Heracles</td>
+                    <td>heracles2756@gmail.com</td>
+                    <td><a href="#" class="btn btn-sm btn-block btn-info">Details</a></td>
+                    <td><a href="#" class="btn btn-sm btn-block btn-warning">Edit</a></td>
+                    <td><a href="#" class="btn btn-sm btn-block btn-danger">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Heracles</td>
+                    <td>heracles2756@gmail.com</td>
+                    <td><a href="#" class="btn btn-sm btn-block btn-info">Details</a></td>
+                    <td><a href="#" class="btn btn-sm btn-block btn-warning">Edit</a></td>
+                    <td><a href="#" class="btn btn-sm btn-block btn-danger">Delete</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- dashboard contents end -->
+<!-- add_employee Modal start -->
+<div class="modal fade" id="add_employee" tabindex="-1" aria-labelledby="add_employeeLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="add_employeeLabel">Add Employee Details</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <input type="date" class="form-control form-control-sm" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control form-control-sm" placeholder="Employee Name"
+                               required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control form-control-sm" placeholder="Employee Email Id"
+                               required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="tel" class="form-control form-control-sm" placeholder="Employee Phone Number"
+                               required>
+                    </div>
+                    <div class="mb-3">
+                        <select class="form-control form-control-sm">
+                            <option value="Graphic Designer">Graphic Designer</option>
+                            <option value="Web Designer">Web Designer</option>
+                            <option value="Web Developer">Web Developer</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-sm btn-success btn-block">Add New Employee</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- add_employee Modal end -->
+<!-- Details Modal start -->
+<div class="modal fade" id="employeeDetails" tabindex="-1" aria-labelledby="employeeDetailsLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="employeeDetailsLabel">Employee Details</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>ID</th>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th>Joining Date</th>
+                        <td>25 Oct 2020</td>
+                    </tr>
+                    <tr>
+                        <th>Name</th>
+                        <td>Heracles</td>
+                    </tr>
+                    <tr>
+                        <th>Email ID</th>
+                        <td>heracles2756@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <th>Phone</th>
+                        <td>+959791546974</td>
+                    </tr>
+                    <tr>
+                        <th>Job</th>
+                        <td>Web Developer</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Details Modal end -->
+<!-- Edit Details Modal start -->
+<div class="modal fade" id="employeeEditDetails" tabindex="-1" aria-labelledby="employeeEditDetailsLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="employeeEditDetailsLabel">Employee Details</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <input type="date" class="form-control form-control-sm" value="2020-10-25" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control form-control-sm" value="Heracles"
+                               placeholder="Employee Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control form-control-sm" value="heracles2756@gmail.com"
+                               placeholder="Employee Email Id" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="tel" class="form-control form-control-sm" value="+959791546974"
+                               placeholder="Employee Phone Number" required>
+                    </div>
+                    <div class="mb-3">
+                        <select class="form-control form-control-sm">
+                            <option value="Graphic Designer">Graphic Designer</option>
+                            <option value="Web Designer">Web Designer</option>
+                            <option value="Web Developer" selected>Web Developer</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-sm btn-success btn-block">
+                            Update Employee
+                            Details
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Edit Details Modal end -->

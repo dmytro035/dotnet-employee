@@ -1,0 +1,40 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome .NET @ViewData["Title"]</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <div class="jumbotron text-center">
+        <button class="btn btn-primary">Primary</button>
+        <button class="btn btn-success">Success</button>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row mt-3">
+            <div class="col-lg-3 col-md-3">
+                <div class="card card-border">
+                    <div class="card-body">
+                        <h4 class="card-title">245 <small class="text-muted">Employees</small></h4>
+                    </div>
+                    <div class="list-group list-group-flush">
+                        <a href="/employeers" class="list-group-item list-group-item-primary">View All</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3">
+                <div class="card card-border">
+                    <div class="card-body">
+                        <h4 class="card-title">25 <small class="text-muted">Jobs</small></h4>
+                    </div>
+                    <div class="list-group list-group-flush">
+                        <a href="/jobs" class="list-group-item list-group-item-primary">View All</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
